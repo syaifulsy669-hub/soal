@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan Soal CPNS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HALAMAN SELAMAT DATANG -->
+<div class="card" id="welcome">
+    <h1>Selamat Datang 👋</h1>
+    <p>Latihan Soal CPNS Berbasis CAT</p>
+    <button onclick="startQuiz()">Mulai Ujian</button>
+</div>
+
+<!-- HALAMAN QUIZ -->
+<div class="card hidden" id="quiz">
+    <div class="header">
+        <span id="number"></span>
+        <span id="score">Skor: 0</span>
+    </div>
+
+    <h2 id="question" class="fade"></h2>
+
+    <div class="options">
+        <label><input type="radio" name="answer" value="A"> <span id="a"></span></label>
+        <label><input type="radio" name="answer" value="B"> <span id="b"></span></label>
+        <label><input type="radio" name="answer" value="C"> <span id="c"></span></label>
+        <label><input type="radio" name="answer" value="D"> <span id="d"></span></label>
+    </div>
+
+    <button onclick="nextQuestion()">Next</button>
+</div>
+
+<!-- HALAMAN HASIL -->
+<div class="card hidden" id="result">
+    <h1>Hasil Ujian</h1>
+    <p id="finalScore"></p>
+    <button onclick="location.reload()">Ulangi</button>
+</div>
+
+<script src="scrip.js" defer></script>
+</body>
+</html>
